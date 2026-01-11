@@ -178,10 +178,13 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
+  /* height: 96vh; */
   min-height: fit-content;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
 }
 
 .section-container {
@@ -584,5 +587,23 @@ footer p {
   }
   .article-container {
     justify-content: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  section {
+    max-width: 1500px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .section__pic-container {
+    height: 500px;
+    width: 500px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .section__text__p2 {
+    font-size: 2.25rem;
   }
 }
