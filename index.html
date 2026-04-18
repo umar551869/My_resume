@@ -1,17 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Muhammad Umar Ilyas</div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Muhammad Umar Ilyas</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Muhammad Umar Ilyas</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/main.png" alt="John Doe profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Muhammad Umar</h1>
+      <p class="section__text__p2">Data Scientist & ML Engineer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/umar-ilyas-b98241336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/umar551869'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="text-container">
+      <p>
+        Data Scientist and Machine Learning Engineer specializing in Generative AI, Retrieval-Augmented Generation
+        (RAG),
+        and multimodal systems. Experienced in building production-style ML pipelines, optimizing vector search (FAISS),
+        and deploying scalable APIs using Docker and AWS. Proven ability to translate research models into real-world
+        applications with measurable performance gains.
+      </p>
+    </div>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/main2.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>Gained hands-on experience in QA, Web Development,
+              Machine Learning and Data Science.<br /></p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" </img>
+            <h3>Education</h3>
+            <p>B.Sc. Bachelors in Data Science<br />FAST NUCES LAHORE</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Technical Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Generative AI & LLMs</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>RAG / LangChain</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>LLaMA 3.1 / Qwen3</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GPT-3.5 / GPT-4</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Hugging Face</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>BART / CLIP / Ollama</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>FAISS / pgvector</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">MLOps & Infrastructure</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Docker / Compose</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>FastAPI / REST APIs</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PostgreSQL / SQL</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Next.js / JWT Auth</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git / Linux / CI-CD</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>NLTK / ROUGE / NLP</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Legal Case Research Agent</h2>
+          <p class="project-stack">FastAPI &middot; Next.js &middot; FAISS &middot; pgvector &middot; LangChain &middot;
+            Docker</p>
+          <p class="project-desc">Production-ready Legal Research AI with hybrid RAG retrieval (Supabase pgvector +
+            FAISS + live web), a 3-tier LLM fallback chain (Qwen3 &rarr; LLaMA 3.1 &rarr; GPT-3.5), hallucination
+            mitigation via sentence-level BART grounding, and a JWT-authenticated REST API with 4-worker Docker
+            deployment and rate limiting.</p>
+        </div>
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Multimodal Semantic Search & Classification</h2>
+          <p class="project-stack">CLIP &middot; FAISS &middot; Transformers &middot; SVM</p>
+          <p class="project-desc">Multimodal semantic search engine using CLIP for text-to-image and image-to-image
+            retrieval. FAISS with Product Quantization reduces memory usage while maintaining retrieval quality.
+            Includes email intent classification benchmarking transformers vs traditional SVMs.</p>
+        </div>
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Semantic Sentiment Engine & Forecasting</h2>
+          <p class="project-stack">Hugging Face &middot; NLP &middot; Ensemble Methods</p>
+          <p class="project-desc">Real-time sentiment analysis pipeline using Hugging Face Transformers for continuous
+            social media stream classification. Forecasting models leveraging advanced feature engineering and ensemble
+            methods to improve time-series prediction accuracy over standard baselines.</p>
+        </div>
+
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">AI Recipe Generator</h2>
+          <p class="project-stack">CNNs &middot; MobileNet &middot; GPT &middot; Computer Vision</p>
+          <p class="project-desc">Hybrid multimodal system generating structured recipes from food images via a
+            CV&rarr;NLP pipeline. Combines MobileNet-based food recognition with LLM-driven recipe generation for
+            end-to-end food-to-recipe inference.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">umar632708@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a
+            href="https://www.linkedin.com/in/umar-ilyas-b98241336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+        </p>
+        <img src="./assets/call.png" alt="Call icon" class="icon call-icon" />
+        <p>+923104994473</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -20,466 +274,9 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Muhammad Umar Ilyas</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/main.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Muhammad Umar</h1>
-        <p class="section__text__p2">Data Scientist</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.docx')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/umar-ilyas-b98241336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/umar551869'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="text-container">
-        <p>
-          I’m Muhammad Umar Ilyas, a passionate Data Science student at FAST University with a strong foundation in machine learning, data mining, and AI-driven solutions. I have hands-on experience building impactful projects, including email detectors, digit classifiers, and NLP-based tools.
+    <p>Copyright &#169; 2023 Umar Ilyas. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-My technical skill set includes Python, TensorFlow, Scikit-learn, and a variety of data visualization libraries. I thrive on solving complex problems through data analysis and intelligent automation. Known for my strong analytical thinking and continuous learning mindset, I am driven to innovate and make meaningful contributions in the field of data science.
-        </p>
-      </div>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/main2.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Gained hands-on experience in QA, Web Development, 
-                Machine Learning and Data Science.<br /></p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"</img>
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors in Data Science<br />FAST NUCES LAHORE</p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Working</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Html</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Data Science Related</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Apache Spark</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              
-            </div>
-            <h2 class="experience-sub-title project-title">Big Data Sales Forcasting</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/bigData_Project_Sales_Forecasting/tree/main'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/bigData_Project_Sales_Forecasting/blob/main/README.md'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-          
-            <h2 class="experience-sub-title project-title">Book Shop Web Application</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Bookshop-WebApplication'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Bookshop-WebApplication'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Food Recipe Generator</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Food-Recipe-generator'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Food-Recipe-generator'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Menstural Cycle Tracker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Menstrual-Cycle-Tracker'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Menstrual-Cycle-Tracker'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-           <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Search Engine (Text and Image)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Search_Engine'"
-
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Search_Engine'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Recomendation System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Recomendation-system'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Recomendation-system'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">AI Team Optimizer for Coach</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/AI_Team_Optimizer'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/AI_Team_Optimizer'"
-
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Personality Matching Through Speech</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Personality-matching-through-speech'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">Email Filter and Automation</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Email-Automation/blob/main/NLP.ipynb'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/Email-Automation/blob/main/README.md'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            
-            <h2 class="experience-sub-title project-title">QA Testing and Automation</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/QA-Automation'"
-
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/umar551869/QA-Automation'"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">umar632708@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/umar-ilyas-b98241336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></p>
-          <img
-            src="./assets/call.png"
-            alt="Call icon"
-            class="icon call-icon"
-          />
-          <p>+923104994473</p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Umar Ilyas. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
 </html>

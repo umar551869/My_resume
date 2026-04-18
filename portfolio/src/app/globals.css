@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --text-muted: #555555;
+  --btn-bg: #f5f5f5;
+  --btn-hover: #e5e5e5;
+  --btn-border: #e5e5e5;
+  --pill-bg: #f9f9f9;
+}
+
+[data-theme='dark'] {
+  --background: #0f1115;
+  --foreground: #ededed;
+  --glass-bg: rgba(20, 20, 25, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
+  --card-bg: #1a1c23;
+  --text-muted: #a0a0a0;
+  --btn-bg: #2a2d36;
+  --btn-hover: #3a3d46;
+  --btn-border: #3a3d46;
+  --pill-bg: #22252c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* iOS 17 Liquid Glass Style - Highly Transparent */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .glass {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+[data-theme='dark'] .glass-card {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 var(--glass-shadow);
+}
+
+/* Utility to ensure text has sufficient contrast */
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Liquid Glass Background */
+.liquid-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 0% 50%, rgba(59, 130, 246, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 100% 50%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.3) 0%, transparent 50%);
+  filter: blur(40px);
+  animation: liquidShift 15s ease-in-out infinite alternate;
+}
+
+[data-theme='dark'] .liquid-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 0% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 100% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+}
+
+@keyframes liquidShift {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1.05) rotate(-2deg); }
+}
+
+/* Premium Noise Texture Overlay */
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.7'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+[data-theme='dark'] .noise-bg {
+  opacity: 0.08;
+  mix-blend-mode: hard-light;
+}
