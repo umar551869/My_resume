@@ -5,6 +5,11 @@ import { motion } from "framer-motion"
 export function Projects() {
   const projects = [
     {
+      title: "Portable Cognitive Graph (PCG)",
+      stack: "Gemini AI • Vector Database • 3D Visualization • Node.js",
+      desc: "Autonomous knowledge pipeline extracting semantic insights from file systems via Gemini. Stores parsed data in a persistent vector database and visualizes cognitive relationships using an interactive, high-fidelity 3D neural interface."
+    },
+    {
       title: "Legal Case Research Agent",
       stack: "FastAPI • Next.js • FAISS • pgvector • LangChain • Docker",
       desc: "Production-ready Legal Research AI with hybrid RAG retrieval (Supabase pgvector + FAISS + live web), a 3-tier LLM fallback chain (Qwen3 → LLaMA 3.1 → GPT-3.5), hallucination mitigation via sentence-level BART grounding, and a JWT-authenticated REST API with 4-worker Docker deployment and rate limiting."

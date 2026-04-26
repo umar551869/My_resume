@@ -14,7 +14,7 @@ export function Hero() {
           className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden glass border-4 border-white/20 shadow-2xl shrink-0"
         >
           <img 
-            src="/assets/main.png" 
+            src="/assets/main1.png" 
             alt="Muhammad Umar Profile" 
             className="w-full h-full object-cover"
           />
