@@ -23,24 +23,24 @@ export function Contact() {
           transition={{ type: "spring", stiffness: 100 }}
           className="glass-card p-8 md:p-10 rounded-[3rem] w-full"
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-8 md:gap-16 w-fit mx-auto">
+          <div className="flex flex-col lg:flex-row flex-wrap items-start lg:items-center justify-center gap-8 lg:gap-16 w-fit max-w-full mx-auto">
             <a href="mailto:umar632708@gmail.com" className="flex items-center gap-4 hover:scale-105 transition-transform">
               <div className="glass w-14 h-14 flex items-center justify-center rounded-full shrink-0">
-                <img src="/assets/email.png" alt="Email" className="w-7 h-7 object-contain invert dark:invert-0" />
+                <img src="/assets/email.png" alt="Email" className="w-7 h-7 object-contain dark:invert" />
               </div>
               <span className="text-[16px] sm:text-lg md:text-xl font-medium break-all sm:break-normal">umar632708@gmail.com</span>
             </a>
 
             <a href="https://www.linkedin.com/in/umar-ilyas-b98241336" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:scale-105 transition-transform">
               <div className="glass w-14 h-14 flex items-center justify-center rounded-full shrink-0">
-                <img src="/assets/linkedin.png" alt="LinkedIn" className="w-7 h-7 object-contain invert dark:invert-0" />
+                <img src="/assets/linkedin.png" alt="LinkedIn" className="w-7 h-7 object-contain dark:invert" />
               </div>
               <span className="text-[16px] sm:text-lg md:text-xl font-medium shrink-0">LinkedIn</span>
             </a>
 
             <div className="flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer">
               <div className="glass w-14 h-14 flex items-center justify-center rounded-full shrink-0">
-                <img src="/assets/call.png" alt="Call" className="w-7 h-7 object-contain invert dark:invert-0" />
+                <img src="/assets/call.png" alt="Call" className="w-7 h-7 object-contain dark:invert" />
               </div>
               <span className="text-[16px] sm:text-lg md:text-xl font-medium shrink-0">+923104994473</span>
             </div>
