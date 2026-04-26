@@ -87,9 +87,11 @@
     text-align: center;
   }
   .section__pic-container {
-    
-    width: auto;
-    height: 46vw;
+    width: 60vw;
+    height: 60vw;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto 2rem;
     justify-content: center;
   }
   .section__text__p2 {
